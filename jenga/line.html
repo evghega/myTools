@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.1.min.js" integrity="sha384-JpP8FXbgAZLkfur7LiK3j9AGBhHNIvF742meBJrjO2ShJDhCG2I1uVvW+0DUtrmc" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="c1ea03cb-febc-40cb-80ce-cb4856da5b76" data-root-id="7152"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="7504">
+          {"c9011204-3bf8-445d-9777-e9d7a1a155f5":{"roots":{"references":[{"attributes":{"below":[{"id":"7163"}],"center":[{"id":"7166"},{"id":"7169"}],"left":[{"id":"7167"}],"renderers":[{"id":"7187"}],"title":{"id":"7153"},"toolbar":{"id":"7177"},"x_range":{"id":"7155"},"x_scale":{"id":"7159"},"y_range":{"id":"7157"},"y_scale":{"id":"7161"}},"id":"7152","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"7168","type":"CategoricalTicker"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"steelblue"},"height":{"value":0.5},"line_alpha":{"value":0.1},"line_color":{"value":"steelblue"},"right":{"field":"right"},"y":{"field":"y"}},"id":"7186","type":"HBar"},{"attributes":{"formatter":{"id":"7354"},"ticker":{"id":"7168"}},"id":"7167","type":"CategoricalAxis"},{"attributes":{},"id":"7174","type":"ResetTool"},{"attributes":{"source":{"id":"7184"}},"id":"7188","type":"CDSView"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"7170"},{"id":"7171"},{"id":"7172"},{"id":"7173"},{"id":"7174"},{"id":"7175"}]},"id":"7177","type":"Toolbar"},{"attributes":{},"id":"7175","type":"HelpTool"},{"attributes":{"data_source":{"id":"7184"},"glyph":{"id":"7185"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"7186"},"selection_glyph":null,"view":{"id":"7188"}},"id":"7187","type":"GlyphRenderer"},{"attributes":{},"id":"7173","type":"SaveTool"},{"attributes":{},"id":"7155","type":"DataRange1d"},{"attributes":{"overlay":{"id":"7176"}},"id":"7172","type":"BoxZoomTool"},{"attributes":{},"id":"7159","type":"LinearScale"},{"attributes":{},"id":"7171","type":"WheelZoomTool"},{"attributes":{"axis":{"id":"7163"},"ticker":null},"id":"7166","type":"Grid"},{"attributes":{"text":"The Deadliest actors"},"id":"7153","type":"Title"},{"attributes":{"fill_color":{"value":"steelblue"},"height":{"value":0.5},"line_color":{"value":"steelblue"},"right":{"field":"right"},"y":{"field":"y"}},"id":"7185","type":"HBar"},{"attributes":{},"id":"7170","type":"PanTool"},{"attributes":{},"id":"7164","type":"BasicTicker"},{"attributes":{},"id":"7358","type":"UnionRenderers"},{"attributes":{"data":{"right":[193,194,201,204,207,226,239,267,295,369],"y":["Wesley Snipes","Clive Owen","Jet Li","Nicolas Cage","Clint Eastwood","Tomisaburo Wakayama","Dolph Lundgren","Sylvester Stallone","Chow Yun-Fat","Arnold Schwarzenegger"]},"selected":{"id":"7357"},"selection_policy":{"id":"7358"}},"id":"7184","type":"ColumnDataSource"},{"attributes":{"formatter":{"id":"7356"},"ticker":{"id":"7164"}},"id":"7163","type":"LinearAxis"},{"attributes":{},"id":"7357","type":"Selection"},{"attributes":{},"id":"7161","type":"CategoricalScale"},{"attributes":{},"id":"7354","type":"CategoricalTickFormatter"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"7176","type":"BoxAnnotation"},{"attributes":{},"id":"7356","type":"BasicTickFormatter"},{"attributes":{"factors":["Wesley Snipes","Clive Owen","Jet Li","Nicolas Cage","Clint Eastwood","Tomisaburo Wakayama","Dolph Lundgren","Sylvester Stallone","Chow Yun-Fat","Arnold Schwarzenegger"]},"id":"7157","type":"FactorRange"},{"attributes":{"axis":{"id":"7167"},"dimension":1,"ticker":null},"id":"7169","type":"Grid"}],"root_ids":["7152"]},"title":"Bokeh Application","version":"2.0.1"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('7504').textContent;
+                  var render_items = [{"docid":"c9011204-3bf8-445d-9777-e9d7a1a155f5","root_ids":["7152"],"roots":{"7152":"c1ea03cb-febc-40cb-80ce-cb4856da5b76"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

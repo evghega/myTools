@@ -1,0 +1,8 @@
+[user]
+	name = evghega
+	email = evghega@ac.sce.ac.il
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

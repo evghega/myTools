@@ -1,0 +1,42 @@
+
+
+#JAVA installation
+sudo apt install default-jdk
+java -version; javac -version
+
+# dowloading hadoop 
+sudo wget https://apache.mivzakim.net/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz
+#extracting:
+tar -xzvf hadoop-3.2.2.tar.gz
+#copying to user installations
+sudo mv hadoop-3.2.2 /usr/local/hadoop
+
+#set java for hadoom
+#get the folder path
+readlink -f /usr/bin/java | sed "s:bin/java::"
+/usr/lib/jvm/java-11-openjdk-amd64/
+
+#in the file hadoop-env.sh export java home env var 
+#edit the file using nano or gedit
+sudo nano /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+#add the export statement in the correct place in the file
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+
+#run hadoop to check sanity
+/usr/local/hadoop/bin/hadoop
+
+
+#run mapreduce example
+#prepare input folder
+mkdir ~/input
+#copy data into the folder
+cp /usr/local/hadoop/etc/hadoop/*.xml ~/input
+
+#run the hadoop-mapreduce-examples-3.2.2.jar on the input folder (the output folder will be created during the proc. 
+#**************************************** if the output folder exist the example will fail *********************************************************
+
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.2.jar grep ~/input ~/grep_example 'allowed[.]*'
+
+
+#use the link to compile and run the WC example
+https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html
